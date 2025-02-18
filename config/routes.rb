@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get("/bitcoins", {:controller => "bitcoins", :action => "index"})
 
   resources "companies"
+  get("/companies/:id", :controller => "companies", :action => "show")
   # get("/companies", {:controller => "companies", :action => "index"})
   resources "contacts"
   # get("/contacts", {:controller => "contacts", :action => "index"})
